@@ -5,7 +5,7 @@ export default function NAVBAR() {
     <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 w-[98vw] max-w-7xl z-50 px-8 py-4 flex justify-between items-center bg-white/70 backdrop-blur-md rounded-3xl shadow-lg border-2 border-teal-200">
       {/* Logo (text for now) */}
       <div className="flex items-center">
-        <img src="/assets/AGAPAY logo.png" alt="Agapay Logo" className="w-10 h-10 object-contain mr-3" />
+        <img src="public/assets/AGAPAY logo.png" alt="Agapay Logo" className="w-10 h-10 object-contain mr-3" />
       </div>
       <ul className="hidden md:flex space-x-10 font-semibold text-black font">
         <li><a href="#hero" className="hover:text-teal-300 transition">Home</a></li>
