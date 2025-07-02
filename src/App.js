@@ -9,7 +9,6 @@ function App() {
     <div>
       <NAVBAR />
       <Home />
-      <Carousel />
     </div>
   );
 }
