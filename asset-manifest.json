@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/AGAPAY_LandingPage/static/css/main.0ed65026.css",
+    "main.js": "/AGAPAY_LandingPage/static/js/main.1c8fe3f9.js",
+    "static/js/453.563d7f2b.chunk.js": "/AGAPAY_LandingPage/static/js/453.563d7f2b.chunk.js",
+    "static/media/iphone mockup.svg": "/AGAPAY_LandingPage/static/media/iphone mockup.7a02630bd42dd5778a1e952667a76ab7.svg",
+    "index.html": "/AGAPAY_LandingPage/index.html",
+    "main.0ed65026.css.map": "/AGAPAY_LandingPage/static/css/main.0ed65026.css.map",
+    "main.1c8fe3f9.js.map": "/AGAPAY_LandingPage/static/js/main.1c8fe3f9.js.map",
+    "453.563d7f2b.chunk.js.map": "/AGAPAY_LandingPage/static/js/453.563d7f2b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ed65026.css",
+    "static/js/main.1c8fe3f9.js"
+  ]
+}
