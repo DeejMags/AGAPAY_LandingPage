@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+
+/* --- Custom styles for About features section --- */
+#about .grid > div {
+  min-width: 220px;
+  min-height: 140px;
+  font-size: 1.35rem;
+  padding: 2.5rem 1.5rem;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+  border-radius: 1.5rem;
+  border: 2px solid #d1d5db !important; /* gray-300 */
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+#about .grid > div:hover {
+  box-shadow: 0 0 10px 2px #0b7669, 0 2px 8px 0 rgba(0,0,0,0.10);
+  border-color: #0b7669 !important;
+  z-index: 1;
+}
+
+#about .grid {
+  gap: 2rem !important;
+  max-width: 900px !important;
+}
+
+/* Make the waitlist container a medium size */
+#getWaitlistContainer {
+  max-width: 340px !important;
+  width: 100% !important;
+  min-width: 200px !important;
+  transform: scale(0.95);
+  transform-origin: top left;
+  margin: 0 auto;
+}

@@ -20,6 +20,10 @@ html, body{
 font-family: 'Poppins', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -37,4 +41,10 @@ font-family: 'Poppins', sans-serif;
 }
 .animate-slideUp-delay {
   animation: slideUp 1s cubic-bezier(0.4,0,0.2,1) 0.4s both;
+}
+.perspective {
+  perspective: 1000px;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
 }
