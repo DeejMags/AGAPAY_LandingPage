@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/AGAPAY_LandingPage/static/css/main.0ed65026.css",
-    "main.js": "/AGAPAY_LandingPage/static/js/main.2637c288.js",
+    "main.css": "/AGAPAY_LandingPage/static/css/main.5db0d76a.css",
+    "main.js": "/AGAPAY_LandingPage/static/js/main.e96d8dc9.js",
     "static/js/453.563d7f2b.chunk.js": "/AGAPAY_LandingPage/static/js/453.563d7f2b.chunk.js",
+    "static/media/demo app(1).mp4": "/AGAPAY_LandingPage/static/media/demo app(1).b6352a4bf81d4f01448d.mp4",
     "static/media/agapay-logo.png": "/AGAPAY_LandingPage/static/media/agapay-logo.9bb74c520823f3e7900c.png",
-    "static/media/iphone mockup.svg": "/AGAPAY_LandingPage/static/media/iphone mockup.7a02630bd42dd5778a1e952667a76ab7.svg",
+    "static/media/agapay-logo.svg": "/AGAPAY_LandingPage/static/media/agapay-logo.c7e6771f29023447ad7ab05164977615.svg",
     "index.html": "/AGAPAY_LandingPage/index.html",
-    "main.0ed65026.css.map": "/AGAPAY_LandingPage/static/css/main.0ed65026.css.map",
-    "main.2637c288.js.map": "/AGAPAY_LandingPage/static/js/main.2637c288.js.map",
+    "main.5db0d76a.css.map": "/AGAPAY_LandingPage/static/css/main.5db0d76a.css.map",
+    "main.e96d8dc9.js.map": "/AGAPAY_LandingPage/static/js/main.e96d8dc9.js.map",
     "453.563d7f2b.chunk.js.map": "/AGAPAY_LandingPage/static/js/453.563d7f2b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0ed65026.css",
-    "static/js/main.2637c288.js"
+    "static/css/main.5db0d76a.css",
+    "static/js/main.e96d8dc9.js"
   ]
 }
