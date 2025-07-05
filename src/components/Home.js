@@ -38,7 +38,7 @@ export default function Home() {
       >
         {/* Background image */}
         <img
-          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80"
+          src="https://images.unsplash.com/photo-1700151675904-f86058e24665?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Background"
           className="absolute inset-0 w-full h-full min-h-screen object-cover z-0"
         />

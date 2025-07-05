@@ -64,7 +64,7 @@ export default function Solutions() {
       <div className="bg-white text-teal-400 rounded-t-3xl max-w-6xl mx-auto -mb-10 md:-mb-16 px-2 sm:px-6 py-6 md:py-10 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 relative z-10" data-aos="fade-up">
         <div className="flex flex-col items-center flex-1 mb-4 md:mb-0">
           <div className="font-bold text-lg md:text-5xl lg:text-4xl mb-3" style={{ color: '#0d9483' }}>Our Potential Impact</div>
-          <div className="text-teal-400 text-xs md:text-base text-center mb-2 md:mb-4">By circulating, you actively help us achieve these goals</div>
+          <div className="text-black font-semibold text-xs md:text-base text-center mb-2 md:mb-4">By circulating, you actively help us achieve these goals</div>
         </div>
         <div className="flex flex-wrap justify-center gap-4 md:gap-8 flex-1 w-full">
           <div className="flex flex-col items-center min-w-[110px] md:min-w-[150px]" data-aos="fade-up" data-aos-delay="100">

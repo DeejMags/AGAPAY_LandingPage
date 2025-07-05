@@ -53,7 +53,12 @@ export default function Carousel() {
   }, []);
   const [flippedIdx, setFlippedIdx] = useState(null);
   const [startIdx, setStartIdx] = useState(0);
-  const isMobile = window.innerWidth < 768;
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   const cardsToShow = isMobile ? 1 : 3;
   const pageSize = isMobile ? 1 : 3;
   const endIdx = startIdx + cardsToShow;
@@ -80,7 +85,7 @@ export default function Carousel() {
       <div className="relative w-full max-w-5xl flex items-center justify-center overflow-x-auto md:overflow-visible">
         {/* Left Arrow */}
         <button
-          className="block absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full shadow p-2 z-10 border border-gray-200 hover:bg-gray-100"
+          className="block absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full shadow w-12 h-12 flex items-center justify-center z-10 border border-gray-200 hover:bg-gray-100 transition-all duration-200"
           data-aos="fade-right"
           onClick={handlePrev}
           disabled={startIdx === 0}
@@ -126,10 +131,10 @@ export default function Carousel() {
                     <div className="flex gap-2 mt-auto">
                       {realIdx < 3 ? (
                         <button
-                          className="bg-[#0d9483] hover:bg-[#0b7669] text-white font-semibold py-2 px-6 rounded-full transition shadow text-sm sm:text-base md:text-lg"
+                          className="bg-[#0d9483] hover:bg-[#0b7669] text-white font-semibold py-2 px-6 w-56 rounded-full transition shadow text-sm sm:text-base md:text-lg"
                           onClick={() => setFlippedIdx(realIdx)}
                         >
-                          Add to Cart
+                          Grab it
                         </button>
                       ) : (
                         <>
@@ -169,7 +174,7 @@ export default function Carousel() {
         </div>
         {/* Right Arrow */}
         <button
-          className="block absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full shadow p-2 z-10 border border-gray-200 hover:bg-gray-100"
+          className="block absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full shadow w-12 h-12 flex items-center justify-center z-10 border border-gray-200 hover:bg-gray-100 transition-all duration-200"
           data-aos="fade-left"
           onClick={handleNext}
           disabled={startIdx >= items.length - cardsToShow}
@@ -180,14 +185,28 @@ export default function Carousel() {
       </div>
       {/* Dots */}
       <div className="flex gap-2 justify-center mt-6" data-aos="fade-up" data-aos-delay="300">
-        {Array.from({length: items.length - cardsToShow + 1}).map((_, i) => (
-          <span
-            key={i}
-            className={`w-3 h-3 rounded-full inline-block ${startIdx === i ? "bg-[#0d9483]" : "bg-gray-300"}`}
-            onClick={() => setStartIdx(i * pageSize)}
-            style={{ cursor: "pointer" }}
-          ></span>
-        ))}
+        {isMobile
+          ? Array.from({length: items.length - cardsToShow + 1}).map((_, i) => (
+              <span
+                key={i}
+                className={`w-3 h-3 rounded-full inline-block ${startIdx === i ? "bg-[#0d9483]" : "bg-gray-300"}`}
+                onClick={() => setStartIdx(i * pageSize)}
+                style={{ cursor: "pointer" }}
+              ></span>
+            ))
+          : [0, 1].map((i) => {
+              // 0 = first page, 1 = last page
+              const pageIdx = i === 0 ? 0 : items.length - cardsToShow;
+              return (
+                <span
+                  key={i}
+                  className={`w-3 h-3 rounded-full inline-block ${startIdx === pageIdx ? "bg-[#0d9483]" : "bg-gray-300"}`}
+                  onClick={() => setStartIdx(pageIdx)}
+                  style={{ cursor: "pointer" }}
+                ></span>
+              );
+            })
+        }
       </div>
     </section>
   );

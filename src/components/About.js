@@ -43,27 +43,27 @@ export default function About() {
       {/* Key Features */}
       <h3 className="text-xl sm:text-3xl md:text-4xl font-bold text-teal-400 mt-8 md:mt-16 mb-4 md:mb-8" data-aos="fade-down" data-aos-delay="400">Discover our key features</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="500">
-        <div className="bg-white rounded-xl shadow p-4 sm:p-8 flex flex-col items-center border-2 border-teal-200 min-w-[140px] min-h-[120px]" data-aos="zoom-in" data-aos-delay="600">
+        <div className="bg-white rounded-xl shadow p-4 sm:p-8 flex flex-col items-center border-2 border-teal-200 min-w-[140px] min-h-[120px] transition-all duration-300 hover:shadow-2xl hover:translate-y-2" data-aos="zoom-in" data-aos-delay="600">
           <span className="text-lg sm:text-4xl mb-2">🎁</span>
           <span className="font-semibold text-teal-500 text-base sm:text-xl">Donate</span>
         </div>
-        <div className="bg-white rounded-xl shadow p-4 sm:p-8 flex flex-col items-center border-2 border-teal-200 min-w-[140px] min-h-[120px]" data-aos="zoom-in" data-aos-delay="700">
+        <div className="bg-white rounded-xl shadow p-4 sm:p-8 flex flex-col items-center border-2 border-teal-200 min-w-[140px] min-h-[120px] transition-all duration-300 hover:shadow-2xl hover:translate-y-2" data-aos="zoom-in" data-aos-delay="700">
           <span className="text-lg sm:text-4xl mb-2">🙋‍♂️</span>
           <span className="font-semibold text-teal-500 text-base sm:text-xl">Request</span>
         </div>
-        <div className="bg-white rounded-xl shadow p-4 sm:p-8 flex flex-col items-center border-2 border-teal-200 min-w-[140px] min-h-[120px]" data-aos="zoom-in" data-aos-delay="800">
+        <div className="bg-white rounded-xl shadow p-4 sm:p-8 flex flex-col items-center border-2 border-teal-200 min-w-[140px] min-h-[120px] transition-all duration-300 hover:shadow-2xl hover:translate-y-2" data-aos="zoom-in" data-aos-delay="800">
           <span className="text-lg sm:text-4xl mb-2">💸</span>
           <span className="font-semibold text-teal-500 text-base sm:text-xl">Earn</span>
         </div>
-        <div className="bg-white rounded-xl shadow p-4 sm:p-8 flex flex-col items-center border-2 border-teal-200 min-w-[140px] min-h-[120px]" data-aos="zoom-in" data-aos-delay="900">
+        <div className="bg-white rounded-xl shadow p-4 sm:p-8 flex flex-col items-center border-2 border-teal-200 min-w-[140px] min-h-[120px] transition-all duration-300 hover:shadow-2xl hover:translate-y-2" data-aos="zoom-in" data-aos-delay="900">
           <span className="text-lg sm:text-4xl mb-2">📊</span>
           <span className="font-semibold text-teal-500 text-base sm:text-xl">Track</span>
         </div>
-        <div className="bg-white rounded-xl shadow p-4 sm:p-8 flex flex-col items-center border-2 border-teal-200 min-w-[140px] min-h-[120px]" data-aos="zoom-in" data-aos-delay="1000">
+        <div className="bg-white rounded-xl shadow p-4 sm:p-8 flex flex-col items-center border-2 border-teal-200 min-w-[140px] min-h-[120px] transition-all duration-300 hover:shadow-2xl hover:translate-y-2" data-aos="zoom-in" data-aos-delay="1000">
           <span className="text-lg sm:text-4xl mb-2">📍</span>
           <span className="font-semibold text-teal-500 text-base sm:text-xl">Locate</span>
         </div>
-        <div className="bg-white rounded-xl shadow p-4 sm:p-8 flex flex-col items-center border-2 border-teal-200 min-w-[140px] min-h-[120px]" data-aos="zoom-in" data-aos-delay="1100">
+        <div className="bg-white rounded-xl shadow p-4 sm:p-8 flex flex-col items-center border-2 border-teal-200 min-w-[140px] min-h-[120px] transition-all duration-300 hover:shadow-2xl hover:translate-y-2" data-aos="zoom-in" data-aos-delay="1100">
           <span className="text-lg sm:text-4xl mb-2">♻️</span>
           <span className="font-semibold text-teal-500 text-base sm:text-xl">Circulate</span>
         </div>

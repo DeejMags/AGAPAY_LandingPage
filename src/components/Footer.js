@@ -19,8 +19,8 @@ export default function Footer() {
         {/* Logo and Copyright */}
         <div className="flex flex-col items-start mb-6 sm:mb-0 w-full sm:w-auto">
           <div className="flex items-center mb-2">
-            <img src={agapayLogo} alt="Agapay Logo" className="w-8 h-8 object-contain" />
-            <span className="ml-2 text-base sm:text-lg font-bold text-white">Agapay</span>
+            <img src={agapayLogo} alt="Agapay Logo" className="w-14 h-14 object-contain" />
+            <span className="ml-3 text-2xl sm:text-3xl font-extrabold text-white">Agapay</span>
           </div>
           <span className="text-xs sm:text-sm text-white">2023 Agapay</span>
         </div>
