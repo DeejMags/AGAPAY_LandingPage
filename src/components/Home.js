@@ -5,6 +5,7 @@ import Carousel from "./Carousel";
 import About from "./About";
 import Solutions from "./Solutions";
 import FAQs from "./FAQs.js";
+import Contact from "./Contact.js";
 import Footer from "./Footer.js";
 
 export default function Home() {
@@ -28,6 +29,18 @@ export default function Home() {
       document.head.removeChild(link);
       document.body.removeChild(script);
     };
+  }, []);
+
+  // Extra: Scroll to anchor on mount if hash is present
+  useEffect(() => {
+    if (window.location.hash === "#contact") {
+      const el = document.getElementById("contact");
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 200);
+      }
+    }
   }, []);
 
   return (
@@ -59,7 +72,7 @@ export default function Home() {
             </p>
           </div>
           <div className="flex-1 flex justify-center items-center w-full mt-8 md:mt-0">
-            <div id="getWaitlistContainer" data-waitlist_id="30000" data-widget_type="WIDGET_1" />
+            <div id="getWaitlistContainer" data-waitlist_id="30165" data-widget_type="WIDGET_1" />
           </div>
         </div>
       </section>
@@ -67,6 +80,8 @@ export default function Home() {
       <About />
       <Solutions />
       <FAQs />
+      <Contact />
+
       <Footer />
     </>
   );

@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     question: "What items can I list?",
-    answer: "Any usable items that can benefit others, from bottles, papers, to clothing. However we do not allow biodegradables and biohazards such as food and TVs (for now). We also don't allow items in bad conditions. (i.e., dirty bottles), so wash those bottles up first!",
+    answer: "Any usable items that can benefit others, from bottles, papers, to clothing. However we do not allow biodegradables and biohazards such as food and TVs. We also don't allow items in bad conditions. (i.e., dirty bottles), so wash those bottles up first!",
   },
 ];
 

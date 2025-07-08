@@ -77,11 +77,19 @@ export default function NAVBAR() {
       navigate('/');
       setTimeout(() => {
         const el = document.getElementById(section);
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
+        console.log('handleSectionNav: navigating to section', section, el);
+        if (el) {
+          const y = el.getBoundingClientRect().top + window.pageYOffset - 80; // 80px offset for navbar
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      }, 200);
     } else {
       const el = document.getElementById(section);
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
+      console.log('handleSectionNav: scrolling to section', section, el);
+      if (el) {
+        const y = el.getBoundingClientRect().top + window.pageYOffset - 80; // 80px offset for navbar
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
     }
     if (menuOpen) setMenuOpen(false);
   };
@@ -90,7 +98,7 @@ export default function NAVBAR() {
     { href: "#home", label: "Home" },
     { href: "#solutions", label: "Solutions" },
     { href: "#about", label: "About" },
-    { href: "/contact", label: "Contact" },
+    { href: "#contact", label: "Contact" },
     { href: "#faq", label: "FAQs" }
   ];
 
@@ -98,7 +106,14 @@ export default function NAVBAR() {
     <>
       <nav className={`fixed top-3 left-1/2 transform -translate-x-1/2 w-[98vw] max-w-7xl z-50 px-2 sm:px-4 py-2 sm:py-3 flex items-center bg-white/70 backdrop-blur-md rounded-3xl shadow-lg border-2 border-teal-200 transition-all duration-500 ${showNav ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-8 pointer-events-none'}`}>
         {/* Logo */}
-        <div className="flex items-center ml-2 md:ml-6 mr-2 md:mr-4 pr-2 sm:pr-4">
+        <div className="flex items-center ml-2 md:ml-6 mr-2 md:mr-4 pr-2 sm:pr-4" style={{cursor: 'pointer'}} onClick={() => {
+          if (location.pathname !== '/') {
+            navigate('/');
+            setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+          } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        }}>
           <img src={logo} alt="logo" className="w-12 h-12 object-contain mr-2 md:mr-3" />
         </div>
         {/* Desktop Nav Centered */}
@@ -107,8 +122,8 @@ export default function NAVBAR() {
             <li><Link to="/" onClick={e => handleSectionNav(e, 'home')} className="hover:text-teal-300 transition px-2 py-1 rounded-lg">Home</Link></li>
             <li><Link to="/" onClick={e => handleSectionNav(e, 'about')} className="hover:text-teal-300 transition px-2 py-1 rounded-lg">About</Link></li>
             <li><Link to="/" onClick={e => handleSectionNav(e, 'solutions')} className="hover:text-teal-300 transition px-2 py-1 rounded-lg">Solutions</Link></li>
-            <li><Link to="/contact" className="hover:text-teal-300 transition px-2 py-1 rounded-lg">Contact</Link></li>
             <li><Link to="/" onClick={e => handleSectionNav(e, 'faq')} className="hover:text-teal-300 transition px-2 py-1 rounded-lg">FAQs</Link></li>
+            <li><Link to="/" onClick={e => handleSectionNav(e, 'contact')} className="hover:text-teal-300 transition px-2 py-1 rounded-lg">Contact</Link></li>
           </ul>
         </div>
         {/* Join Waitlist Button Desktop */}

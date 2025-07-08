@@ -85,16 +85,16 @@ export default function Carousel() {
       <div className="relative w-full max-w-5xl flex items-center justify-center overflow-x-auto md:overflow-visible">
         {/* Left Arrow */}
         <button
-          className="block absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full shadow w-12 h-12 flex items-center justify-center z-10 border border-gray-200 hover:bg-gray-100 transition-all duration-200"
+          className="block absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full shadow w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center z-10 border border-gray-200 hover:bg-gray-100 transition-all duration-200"
           data-aos="fade-right"
           onClick={handlePrev}
           disabled={startIdx === 0}
           style={{ display: startIdx === 0 && isMobile ? 'none' : 'block' }}
         >
-          <span className="text-2xl">&#8592;</span>
+          <span className="text-lg sm:text-2xl">&#8592;</span>
         </button>
         {/* Cards */}
-        <div className="flex gap-4 md:gap-6 justify-center w-full min-w-[260px] md:min-w-0">
+        <div className="flex gap-3 sm:gap-4 md:gap-6 justify-center w-full min-w-[280px] md:min-w-0 px-2 sm:px-0">
           {visibleItems.map((item, idx) => {
             const realIdx = startIdx + idx;
             return (
@@ -128,10 +128,10 @@ export default function Carousel() {
                         <span className="text-teal-500 font-bold text-base sm:text-lg md:text-lg">{item.free ? "FREE!" : item.price}</span>
                       </div>
                     </div>
-                    <div className="flex gap-2 mt-auto">
+                    <div className="flex gap-2 mt-auto w-full justify-center">
                       {realIdx < 3 ? (
                         <button
-                          className="bg-[#0d9483] hover:bg-[#0b7669] text-white font-semibold py-2 px-6 w-56 rounded-full transition shadow text-sm sm:text-base md:text-lg"
+                          className="bg-[#0d9483] hover:bg-[#0b7669] text-white font-semibold py-2.5 px-4 w-full rounded-full transition shadow text-sm sm:text-base"
                           onClick={() => setFlippedIdx(realIdx)}
                         >
                           Grab it
@@ -139,13 +139,13 @@ export default function Carousel() {
                       ) : (
                         <>
                           <button
-                            className="bg-[#0d9483] hover:bg-[#0b7669] text-white font-semibold py-2 px-4 rounded-full transition shadow text-sm sm:text-base md:text-lg"
+                            className="bg-[#0d9483] hover:bg-[#0b7669] text-white font-semibold py-2.5 px-3 sm:px-4 rounded-full transition shadow text-xs sm:text-sm"
                             onClick={() => setFlippedIdx(realIdx)}
                           >
                             Donate
                           </button>
                           <button
-                            className="bg-[#0d9483] hover:bg-[#0b7669] text-white font-semibold py-2 px-4 rounded-full transition shadow text-sm sm:text-base md:text-lg"
+                            className="bg-[#0d9483] hover:bg-[#0b7669] text-white font-semibold py-2.5 px-3 sm:px-4 rounded-full transition shadow text-xs sm:text-sm"
                             onClick={() => setFlippedIdx(realIdx)}
                           >
                             Rent
@@ -161,11 +161,20 @@ export default function Carousel() {
                       transform: "rotateY(180deg)",
                       backfaceVisibility: "hidden",
                     }}
-                    onClick={() => setFlippedIdx(null)}
                   >
                     <span className="text-4xl mb-2">🚧</span>
-                    <span className="mb-2">Coming Soon!</span>
-                    <span className="text-sm mt-2">(Click to flip back)</span>
+                    <span className="mb-2">Join the Waitlist</span>
+                    <button
+                      className="mt-4 bg-white text-[#0d9483] font-semibold py-2.5 px-4 sm:px-6 rounded-full shadow hover:bg-teal-50 transition text-sm sm:text-base"
+                      onClick={e => {
+                        e.stopPropagation();
+                        setFlippedIdx(null);
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
+                    >
+                      Join Waitlist
+                    </button>
+                    <span className="text-sm mt-2">(Click the button to join)</span>
                   </div>
                 </div>
               </div>
@@ -174,13 +183,13 @@ export default function Carousel() {
         </div>
         {/* Right Arrow */}
         <button
-          className="block absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full shadow w-12 h-12 flex items-center justify-center z-10 border border-gray-200 hover:bg-gray-100 transition-all duration-200"
+          className="block absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full shadow w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center z-10 border border-gray-200 hover:bg-gray-100 transition-all duration-200"
           data-aos="fade-left"
           onClick={handleNext}
           disabled={startIdx >= items.length - cardsToShow}
           style={{ display: startIdx >= items.length - cardsToShow && isMobile ? 'none' : 'block' }}
         >
-          <span className="text-2xl">&#8594;</span>
+          <span className="text-lg sm:text-2xl">&#8594;</span>
         </button>
       </div>
       {/* Dots */}
